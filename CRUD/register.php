@@ -16,7 +16,7 @@
 <!-- Register form starts -->
 
 <form method="POST">
-    <div class="container mt-5" style="width:40%;border: black solid 2px;">
+    <div class="container mt-5" style="width:40%; border:black solid 2px; height:auto;">
         <h2 class="p-2 mb-3" style="border-bottom:4px solid green; width: 15%;">Registration</h2>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Full Name</label>
@@ -38,7 +38,7 @@
       </div>
       
      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">If Register ?</font><a href="login.php" style="text-decoration:none;">Click Here</a></label>
+        <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">Return to</font> &nbsp;<a href="login.php" style="text-decoration:none;">login page</a></label>
         <div id="emailHelp" class="form-text"></div>
       </div>
       
@@ -66,5 +66,9 @@ if(isset($_POST['insert']))
     if(!$query)
     {
         echo "Insertion Failed...!!";
+    }
+
+    else{
+      header("Location:login.php");
     }
 }

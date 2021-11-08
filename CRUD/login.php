@@ -25,7 +25,7 @@
   </div>
   
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">If not Register ?</font><a href="register.php" style="text-decoration:none;">Click Here</a></label>
+    <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;"></font><a href="register.php" style="text-decoration:none;">Register here</a></label>
     <div id="emailHelp" class="form-text"></div>
   </div>
   

@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect('localhost','root','','register') or die('Connection Failed...!');
+$con=mysqli_connect('localhost','root','','crud') or die('Connection Failed...!');
 
 
 ?>
