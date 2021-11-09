@@ -60,10 +60,10 @@ else
       </div>
      
       
-     <div class="mb-3">
+     <!-- <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">If Register ?</font><a href="login.php" style="text-decoration:none;">Click Here</a></label>
         <div id="emailHelp" class="form-text"></div>
-      </div>
+      </div> -->
       
       <input type="submit" class="btn btn-success" name="insert" value="Update">
       
