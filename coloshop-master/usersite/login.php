@@ -19,12 +19,12 @@
       // include "connection.php"
       ?>
 <body>
-    <form method="post" action="u_login.php">
+    <form method="post">
     <div class="container mt-10 pt-2 pb-3" style="width:40%;border: black solid 2px; margin-top:230px;">
 	<h3 class=" mb-3" style="border-bottom:5px solid green; width: 20%;">Log in</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    
   </div>
   <div class="mb-3">
@@ -33,7 +33,7 @@
   </div>
   
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;"></font><a href="u_register.php" style="text-decoration:none;">Register here</a></label>
+    <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;"></font><a href="register.php" style="text-decoration:none;">Register here</a></label>
     <div id="emailHelp" class="form-text"></div>
   </div>
   
@@ -43,7 +43,7 @@
 </form>
 </div>
 
-<?php // include "footer.php"?>
+<?php include "footer.php"?>
 
 </body>
 </html>
@@ -51,24 +51,20 @@
 <?php
 //session_start();
 
-$con=mysqli_connect('localhost','root','','admn');
-
-
-
 if(isset($_POST['insert']))
 {
-    $email=$_POST['email'];
+    $email=$_POST['username'];
     $password=$_POST['password'];
- 
+  include "connection.php";
 
-    $sql="select email,password from user where email='$email' and password='$password'";
+    $sql="select username,password from user where username='$email' and password='$password'";
     $query=mysqli_query($con,$sql);
     
     if(mysqli_num_rows($query)>0)
     {
         session_start();
-        $_SESSION['email']=$email;
-        header("Location:contact.php");
+        $_SESSION['username']=$email;
+        header("Location:index.php");
         echo "welcome";
     }
     else

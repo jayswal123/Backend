@@ -21,7 +21,7 @@
 
 <!-- Register form starts -->
 
-<form method="POST" action="u_register.php">
+<form method="POST">
     <div class="container" style="width:40%; border:black solid 2px;  margin-top:220px;">
         <h3 class="mb-3 mt-3" style="border-bottom:4px solid green; width: 35%; ">Registration</h3>
       <div class="mb-3">
@@ -44,7 +44,7 @@
       </div>
       
      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">Return to</font> &nbsp;<a href="u_login.php" style="text-decoration:none;">login page</a></label>
+        <label for="exampleInputEmail1" class="form-label"><font style="color:red; border:none; font-size:20px;">Return to</font> &nbsp;<a href="login.php" style="text-decoration:none;">login page</a></label>
         <div id="emailHelp" class="form-text"></div>
       </div>
       
@@ -77,6 +77,6 @@ if(isset($_POST['insert']))
     }
 
     else{
-      header("Location:u_login.php");
+      header("Location:login.php");
     }
 }
