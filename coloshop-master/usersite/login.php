@@ -15,8 +15,8 @@
     
 </head>
 
-<?php include "header.php"   
-      // include "connection.php"
+<?php include "header.php"  ; 
+     include "connection.php";
       ?>
 <body>
     <form method="post">
@@ -24,7 +24,7 @@
 	<h3 class=" mb-3" style="border-bottom:5px solid green; width: 20%;">Log in</h3>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
    
   </div>
   <div class="mb-3">
@@ -51,19 +51,21 @@
 <?php
 //session_start();
 
+include "connection.php";
+
 if(isset($_POST['insert']))
 {
-    $email=$_POST['username'];
+    $email=$_POST['email'];
     $password=$_POST['password'];
   include "connection.php";
 
-    $sql="select username,password from user where username='$email' and password='$password'";
+    $sql="select email,password from user where email='$email' and password='$password'";
     $query=mysqli_query($con,$sql);
     
     if(mysqli_num_rows($query)>0)
     {
         session_start();
-        $_SESSION['username']=$email;
+        $_SESSION['email']=$email;
         header("Location:index.php");
         echo "welcome";
     }
