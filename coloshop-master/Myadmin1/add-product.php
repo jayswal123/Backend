@@ -38,7 +38,7 @@
         <div class="mb-3">
           <label class="form-label">Product Category:</label>
           <select class="form-select" aria-label="Default select example" name="pages" required>
-
+          
             <option value="men">Men</option>
             <option value="women">Women</option>
             <option value="accessories">Accessories</option>

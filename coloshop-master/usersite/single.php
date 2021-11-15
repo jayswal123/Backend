@@ -51,6 +51,18 @@
 			</div>
 		</div>
 
+
+		<?php
+		$id = $_GET['id'];
+		include "connection.php";
+
+		$record = mysqli_query($con, "SELECT * FROM `product` WHERE id = $id");
+		$data = mysqli_fetch_array($record);
+
+
+		?>
+
+
 		<div class="row">
 			<div class="col-lg-7">
 				<div class="single_product_pics">

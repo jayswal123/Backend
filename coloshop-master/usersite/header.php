@@ -6,8 +6,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<!-- <div class="top_nav_left">free shipping on all u.s orders over $50</div> -->
-						<div class="top_nav_left" style="color: while; text-decoration:none;"><a href="/phpeCom/admin/login.php">ADMIN PANEL</a></div>
+						<div class="top_nav_left">free shipping on all u.s orders over $50</div>
+						<!-- <div class="top_nav_left" style="color: while; text-decoration:none;"><a href="/phpeCom/admin/login.php">ADMIN PANEL</a></div> -->
 						
 					</div>
 					<div class="col-md-6 text-right">
@@ -46,8 +46,8 @@
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="account_selection">
-										<li><a href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-										<li><a href="register.php"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+										<li><a href="u_login.php"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a href="u_register.php"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 										
 									</ul>
 
@@ -67,7 +67,7 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<a href="#">colo<span>shop</span></a>
+							<a href="index.php">colo<span>shop</span></a>
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 12, 2021 at 11:16 AM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 15, 2021 at 04:21 AM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,20 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `admn`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `accessories`
---
-
-CREATE TABLE `accessories` (
-  `a-id` int(11) NOT NULL,
-  `a-name` int(11) NOT NULL,
-  `a-price` int(11) NOT NULL,
-  `a-desc` int(11) NOT NULL,
-  `a-image` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -57,40 +43,6 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
---
-
-CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
-  `category-name` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `category`
---
-
-INSERT INTO `category` (`id`, `category-name`) VALUES
-(1, 'men'),
-(2, 'women'),
-(4, 'accessories');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `man`
---
-
-CREATE TABLE `man` (
-  `m-id` int(11) NOT NULL,
-  `m-name` varchar(100) NOT NULL,
-  `m-price` varchar(11) NOT NULL,
-  `m-desc` varchar(100) NOT NULL,
-  `m-image` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `product`
 --
 
@@ -108,21 +60,23 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `pname`, `pprice`, `pdesc`, `pimage`, `pcategory`) VALUES
-(4, 'apple', '2000$', 'phone', 'uploadimage/apple-10-5-ipad-pro-64-gb-space-grey-2017.jpg', 'accessories'),
-(6, 'asus', '2000$', 'asus-transformer-mini-t102ha-10-1-2-1-silver', 'uploadimage/asus-transformer-mini-t102ha-10-1-2-1-silver.jpg', 'accessories');
+(1, 'men\'s hoodie ', '100 $', ' violet color (cotton)', 'uploadimage/product_1.png', 'men'),
+(2, '\"Hand Bag\"(Grocessary) ', '500$', 'grey color', 'uploadimage/product_2.png', 'accessories'),
+(3, 'Sweater (yellow colored)', '100 $', 'cotton', 'uploadimage/product_3.png', 'women'),
+(4, 'Gym Bag', '200$', 'leather (grey color)', 'uploadimage/product_4.png', 'accessories'),
+(5, 'Nike Shoes', '500$', 'cream color , canvas', 'uploadimage/product_5.png', 'men');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `women`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `women` (
-  `w-id` bigint(11) NOT NULL,
-  `w-name` varchar(200) NOT NULL,
-  `w-price` varchar(11) NOT NULL,
-  `w-desc` varchar(200) NOT NULL,
-  `w-image` varchar(200) NOT NULL
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -130,21 +84,9 @@ CREATE TABLE `women` (
 --
 
 --
--- Indexes for table `accessories`
---
-ALTER TABLE `accessories`
-  ADD PRIMARY KEY (`a-id`);
-
---
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `category`
---
-ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -154,20 +96,14 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `women`
+-- Indexes for table `user`
 --
-ALTER TABLE `women`
-  ADD PRIMARY KEY (`w-id`);
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `accessories`
---
-ALTER TABLE `accessories`
-  MODIFY `a-id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `admin`
@@ -176,22 +112,16 @@ ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `women`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `women`
-  MODIFY `w-id` bigint(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

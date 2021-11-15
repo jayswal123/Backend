@@ -3,10 +3,10 @@
 
 
 <?php
-$ID = $_GET['ID'];
+$id = $_GET['id'];
 include "connection.php";
 
-$record = mysqli_query($con, "SELECT * FROM `product` WHERE id = $ID");
+$record = mysqli_query($con, "SELECT * FROM `product` WHERE id = $id");
 $data = mysqli_fetch_array($record);
 
 
@@ -58,7 +58,7 @@ $data = mysqli_fetch_array($record);
             <option value="accessories">Accessories</option>
           </select>
         </div>
-        <input type="hidden"  name="ID" value="<?php echo $data['id']?>">
+        <input type="hidden"  name="id" value="<?php echo $data['id']?>">
         <button class="bg-success fs-4 fw-bold my-3 form-control text-white" name="update">Update</button>
 
 
@@ -74,7 +74,7 @@ $data = mysqli_fetch_array($record);
 <?php
 
 if (isset($_POST['update'])) {
-    $id  = $_POST['ID'];
+    $id  = $_POST['id'];
     $pr_name  = $_POST['pname'];
     $pr_price = $_POST['pprice'];
     $pr_desc  = $_POST['pdesc'];
@@ -91,8 +91,18 @@ if (isset($_POST['update'])) {
 
     include "connection.php";
 
-    mysqli_query($con, "UPDATE `product` SET `pname`='$pr_name',`pprice`='$pr_price',`pdesc`='$pr_desc',`pimage`='$img_des',`pcategory`='$pr_category' WHERE id='$id'");
-     header ( "all-product.php");
+    $sql2="UPDATE product SET pname='$pr_name', pprice='$pr_price', pdesc='$pr_desc', pimage='$img_des', pcategory='$pr_category' WHERE id='$id'";
+    $query=mysqli_query($con,$sql2);
+
+    if($query)
+    {
+        header("Location:all-product.php");
+    }
+    else
+    {
+        echo "Updation Error";
+    }
+    mysqli_close($con);
 
 };
   
