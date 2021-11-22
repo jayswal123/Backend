@@ -62,7 +62,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
                         <a class="dropdown-item" href="all-product.php">All Products</a>
                         <a class="dropdown-item" href="add-product.php">Add Products</a>
-                        <a class="dropdown-item" href="#!">Manage Products</a>
+                        <a class="dropdown-item" href="all-product.php">Manage Products</a>
                     </div>
                 </li>
 

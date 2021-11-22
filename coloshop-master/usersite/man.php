@@ -206,7 +206,7 @@
 										<div class='product_price'>'$row[pprice]'</div>
 									</div>
 								</div>
-								<div class='red_button add_to_cart_button'><a href=>add to cart</a></div>
+								<div class='red_button add_to_cart_button'><a href='insertcart.php? id=$row[id]'>add to cart</a></div>
 							</div>";
 							
 

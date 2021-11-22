@@ -80,6 +80,10 @@ if (isset($_POST['submit'])) {
   $sql = " INSERT INTO `product`( `pname`, `pprice`, `pdesc`, `pimage`, `pcategory`) VALUES ('$pr_name','$pr_price','$pr_desc','$img_des','$pr_category') ";
   $query = mysqli_query($con, $sql);
 
+  //move_uploaded_file($image_loc, "uploadimage/" . $image_name);
+  $sql = " INSERT INTO  $pr_category ( `pname`, `pprice`, `pdesc`, `pimage`) VALUES ('$pr_name','$pr_price','$pr_desc','$img_des') ";
+  $query = mysqli_query($con, $sql);
+
   if (!$query) {
     echo "insertion failed...";
   } else {

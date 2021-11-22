@@ -64,10 +64,10 @@ if(isset($_POST['insert']))
     
     if(mysqli_num_rows($query)>0)
     {
-        session_start();
-        $_SESSION['email']=$email;
+        // session_start();
+        // $_SESSION['email']=$email;
         header("Location:index.php");
-        echo "welcome";
+        //echo "welcome";
     }
     else
     {
