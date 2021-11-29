@@ -1,0 +1,1 @@
+<?php$result = array(144);$sub_struct_month = ($result[0] / 30) ;$sub_struct_month = floor($sub_struct_month); $sub_struct_days = ($result[0] % 30); // the rest of days$sub_struct = $sub_struct_month."m ".$sub_struct_days."d";echo $sub_struct;?>

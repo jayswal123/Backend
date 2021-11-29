@@ -1,0 +1,184 @@
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| 29-10-21           |
+| Student Details    |
+| admn               |
+| coloshop           |
+| crud               |
+| ecomm              |
+| ecommerce          |
+| electricks         |
+| information_schema |
+| mysql              |
+| pdo                |
+| pdo_crud           |
+| performance_schema |
+| phpmyadmin         |
+| product            |
+| test               |
+| queries            |
++--------------------+
+17 rows in set (0.022 sec)
+
+
+
+
+MariaDB [(none)]> use queries;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [queries]> select ascii(id) as numcodeoffirstchar from product;
++--------------------+
+| numcodeoffirstchar |
++--------------------+
+| 49 |
+| 50 |
+| 51 |
+| 53 |
+| 54 |
+| 55 |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [queries]> SELECT CHAR_LENGTH("SQL Tutorial") AS LengthOfString;
++----------------+
+| LengthOfString |
++----------------+
+| 12 |
++----------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT CONCAT("SQL ", "Tutorial ", "is ", "fun!") AS ConcatenatedString;
++----------------------+
+| ConcatenatedString |
++----------------------+
+| SQL Tutorial is fun! |
++----------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT FIELD("q", "s", "q", "l");
++---------------------------+
+| FIELD("q", "s", "q", "l") |
++---------------------------+
+| 2 |
++---------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT FIND_IN_SET("q", "s,q,l");
++---------------------------+
+| FIND_IN_SET("q", "s,q,l") |
++---------------------------+
+| 2 |
++---------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT FORMAT(250500.5634, 2);
++------------------------+
+| FORMAT(250500.5634, 2) |
++------------------------+
+| 250,500.56 |
++------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT INSERT("sanjay", 1, 9, "Example");
++-----------------------------------+
+| INSERT("sanjay", 1, 9, "Example") |
++-----------------------------------+
+| Example |
++-----------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT LCASE("work done");
++--------------------+
+| LCASE("work done") |
++--------------------+
+| work done |
++--------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT LEFT("done", 3) AS ExtractString;
++---------------+
+| ExtractString |
++---------------+
+| don |
++---------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT REPLACE("done", "SQL", "HTML");
++--------------------------------+
+| REPLACE("done", "SQL", "HTML") |
++--------------------------------+
+| done |
++--------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]>
+MariaDB [queries]> SELECT REPEAT("done", 3);
++-------------------+
+| REPEAT("done", 3) |
++-------------------+
+| donedonedone |
++-------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT REVERSE("done");
++-----------------+
+| REVERSE("done") |
++-----------------+
+| enod |
++-----------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT RPAD("done", 20, "ABC");
++-------------------------+
+| RPAD("done", 20, "ABC") |
++-------------------------+
+| doneABCABCABCABCABCA |
++-------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT SPACE(10);
++------------+
+| SPACE(10) |
++------------+
+| |
++------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT SUBSTR("done", 5, 3) AS ExtractString;
++---------------+
+| ExtractString |
++---------------+
+| |
++---------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT TRIM(' DONE ') AS TrimmedString;
++---------------+
+| TrimmedString |
++---------------+
+| DONE |
++---------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]>
+MariaDB [queries]> SELECT UCASE("work done");
++--------------------+
+| UCASE("work done") |
++--------------------+
+| WORK DONE |
++--------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]> SELECT UPPER("Wrok done ");
++---------------------+
+| UPPER("Wrok done ") |
++---------------------+
+| WORK DONE |
++---------------------+
+1 row in set (0.000 sec)
+
+MariaDB [queries]>
